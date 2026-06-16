@@ -1,0 +1,20 @@
+<svg viewBox="0 0 520 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Palestra Disnel ASD">
+  <defs>
+    <linearGradient id="discRing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e4002b"/>
+      <stop offset="0.5" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#1f3fc4"/>
+    </linearGradient>
+    <linearGradient id="discRing2" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f3fc4"/>
+      <stop offset="0.55" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e4002b"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="260" cy="115" rx="250" ry="102" fill="#ffffff" stroke="url(#discRing)" stroke-width="18"/>
+  <ellipse cx="260" cy="115" rx="232" ry="86" fill="none" stroke="url(#discRing2)" stroke-width="6" opacity="0.85"/>
+  <text x="260" y="60" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="33" letter-spacing="7" fill="#e4002b">PALESTRA</text>
+  <text x="263" y="143" text-anchor="middle" font-family="Montserrat, 'Arial Black', sans-serif" font-weight="900" font-size="90" letter-spacing="2" fill="#0a1540">DISNEL</text>
+  <text x="260" y="140" text-anchor="middle" font-family="Montserrat, 'Arial Black', sans-serif" font-weight="900" font-size="90" letter-spacing="2" fill="#1f3fc4" stroke="#0a1540" stroke-width="1.4">DISNEL</text>
+  <text x="260" y="196" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="29" letter-spacing="9" fill="#e4002b">ASD</text>
+</svg>
