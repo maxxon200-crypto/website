@@ -23,6 +23,20 @@ Appariranno **da soli** nel sito, al posto dei segnaposto. Non serve toccare il 
 > I nomi devono essere **identici** (minuscolo, estensione `.jpg`). Puoi caricarne anche
 > solo alcune: gli slot senza foto restano segnaposto grafici.
 
+### 📌 Mappa consigliata per le foto inviate
+In base alle foto della palestra, ecco come rinominarle per avere già le didascalie giuste:
+
+| Foto                                              | Rinominala in     |
+|---------------------------------------------------|-------------------|
+| Zona cardio (tapis roulant/ellittiche, pilastri gialli) | `hero.jpg` **e** `gallery-1.jpg` |
+| Macchina isotonica (pilastri azzurri)             | `about.jpg` (verticale) **e** `gallery-3.jpg` |
+| Sala corsi (parquet, specchio, spalliera)         | `gallery-2.jpg`   |
+| Zona pesi (macchine guidate, cavi)                | `gallery-4.jpg`   |
+| Allenamento alla panca piana                      | `gallery-5.jpg`   |
+
+> `gallery-6.jpg` resta libero: caricaci un'altra foto della sala attrezzi quando vuoi.
+> La stessa foto può essere usata per più slot (es. la zona cardio sia come `hero` sia in galleria).
+
 ### Modo più facile per caricarle (da browser, senza programmi)
 1. Vai nel repository su GitHub → cartella `images/`
 2. **Add file → Upload files**
