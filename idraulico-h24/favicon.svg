@@ -1,0 +1,16 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Idraulico H24">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a63c9"/>
+      <stop offset="1" stop-color="#0a1f44"/>
+    </linearGradient>
+    <linearGradient id="drop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#19c3e6"/>
+      <stop offset="1" stop-color="#0a63c9"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <path d="M32 12c9 11 15 17 15 26a15 15 0 0 1-30 0c0-9 6-15 15-26Z" fill="url(#drop)"/>
+  <path d="M24 40a8 8 0 0 0 8 8" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+  <rect x="6" y="6" width="22" height="6" rx="3" fill="#ff7a1a"/>
+</svg>
