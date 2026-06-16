@@ -1,36 +1,49 @@
 # Immagini del sito — Palestra Disnel ASD
 
-Questa cartella contiene la grafica del sito. Il sito funziona **anche senza foto**
-(usa sfondi grafici nei colori del brand), ma diventa molto più bello con le **foto reali**
-della palestra.
+Il sito funziona **anche senza foto** (mostra eleganti sfondi grafici nei colori del brand),
+ma diventa molto più bello con le **foto reali** della palestra.
 
-## Come aggiungere le tue foto
+## ✅ Come aggiungere le tue foto (semplicissimo, zero codice)
 
-Basta inserire in questa cartella i file con **esattamente questi nomi**:
+Carica in questa cartella `images/` i file con **esattamente questi nomi**.
+Appariranno **da soli** nel sito, al posto dei segnaposto. Non serve toccare il codice.
 
-| File              | Dove appare                | Formato consigliato      |
-|-------------------|----------------------------|--------------------------|
-| `hero.jpg`        | Sfondo grande in cima      | 1920×1080 px (orizzontale) |
-| `about.jpg`       | Sezione "Chi siamo"        | 1000×1250 px (verticale)  |
-| `logo.svg`        | Logo (già presente)        | — sostituibile con `logo.png` |
+| File             | Dove appare nel sito           | Formato consigliato        |
+|------------------|--------------------------------|----------------------------|
+| `hero.jpg`       | Sfondo grande in cima (hero)   | 1920×1080 px (orizzontale) |
+| `about.jpg`      | Sezione "Chi siamo"            | 1000×1250 px (verticale)   |
+| `gallery-1.jpg`  | Galleria — foto 1              | ~1200×900 px (orizzontale) |
+| `gallery-2.jpg`  | Galleria — foto 2              | ~1200×900 px               |
+| `gallery-3.jpg`  | Galleria — foto 3              | ~1200×900 px               |
+| `gallery-4.jpg`  | Galleria — foto 4              | ~1200×900 px               |
+| `gallery-5.jpg`  | Galleria — foto 5              | ~1200×900 px               |
+| `gallery-6.jpg`  | Galleria — foto 6              | ~1200×900 px               |
+| `logo.svg`       | Logo (già presente)            | — sostituibile con `logo.png` |
 
-### Per attivare la foto di sfondo (hero)
-Apri `css/style.css`, cerca `.hero__bg` e **togli i `/* */`** dalla riga:
+> I nomi devono essere **identici** (minuscolo, estensione `.jpg`). Puoi caricarne anche
+> solo alcune: gli slot senza foto restano segnaposto grafici.
 
-```css
-.hero__bg { background-image: url("../images/hero.jpg"); background-size: cover; background-position: center; }
+### Modo più facile per caricarle (da browser, senza programmi)
+1. Vai nel repository su GitHub → cartella `images/`
+2. **Add file → Upload files**
+3. Trascina le foto **rinominate** come sopra (`hero.jpg`, `about.jpg`, `gallery-1.jpg`…)
+4. **Commit changes**. Fatto: il sito si aggiorna da solo.
+
+### In alternativa (da computer, con git)
+```bash
+# copia le foto in images/ con i nomi giusti, poi:
+git add images/
+git commit -m "Aggiunte foto reali della palestra"
+git push
 ```
 
-### Per la foto "Chi siamo"
-Basta caricare `about.jpg` in questa cartella: appare automaticamente
-(altrimenti resta un elegante sfondo grafico segnaposto).
-
-### Logo
-È già presente `logo.svg` (versione vettoriale ricostruita). Se vuoi usare il tuo
+## Logo
+È già presente `logo.svg` (ricostruzione vettoriale nei colori originali). Per usare il tuo
 logo originale in PNG, caricalo come `logo.png` e sostituisci `logo.svg` con `logo.png`
-nei riferimenti dentro `index.html`.
+nei riferimenti in `index.html` (header e footer).
 
-## Consigli
-- Usa foto luminose e ben inquadrate (sala attrezzi, sala corsi, reception).
-- Comprimi le immagini (es. https://squoosh.app) per un sito veloce: punta a < 300 KB ciascuna.
-- Evita foto con volti di persone riconoscibili senza il loro consenso.
+## Consigli per foto perfette
+- Scatta/scegli foto **luminose e ben inquadrate**: sala attrezzi, zona cardio, sala corsi, reception.
+- **Comprimi** le immagini (es. https://squoosh.app) per un sito veloce: punta a **< 300 KB** ciascuna.
+- Orizzontali per `hero` e `gallery`, verticale per `about`.
+- Evita di mostrare volti riconoscibili senza il consenso delle persone.
