@@ -12,6 +12,8 @@ Appariranno **da soli** nel sito, al posto dei segnaposto. Non serve toccare il 
 | File                  | Dove appare nel sito                         | Formato consigliato        |
 |-----------------------|----------------------------------------------|----------------------------|
 | `hero.jpg`            | Riquadro foto dell'hero (in alto a destra)   | ~1200×1000 px (quasi quadrata) |
+| `titolare.jpg`        | Sezione "Chi siamo" (volto del titolare/squadra) | ~1000×1100 px (verticale) |
+| `lavoro-1.jpg` … `lavoro-6.jpg` | Galleria "Lavori realizzati" (6 caselle) | ~1000×750 px (orizzontale) |
 | `condizionatori.jpg`  | Sezione "Sanificazione condizionatori"       | ~1200×900 px (orizzontale) |
 | `logo.svg`            | Anteprima social (Open Graph) / favicon       | — il nome in pagina è l'insegna testuale |
 
