@@ -57,7 +57,7 @@
     nav.classList.contains("is-open") ? closeMenu() : openMenu();
   });
   on(backdrop, "click", closeMenu);
-  $$(".nav__link, .nav__phone", nav).forEach(function (a) { on(a, "click", closeMenu); });
+  $$(".nav__link, .nav__cta", nav).forEach(function (a) { on(a, "click", closeMenu); });
   on(doc, "keydown", function (e) { if (e.key === "Escape") closeMenu(); });
 
   /* ---------- Reveal on scroll ---------- */
