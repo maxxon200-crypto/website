@@ -1,9 +1,11 @@
 # Sito web — Idraulico H24 Milano
 
 Sito vetrina **statico, responsive e veloce** per un idraulico di pronto intervento a Milano.
-Design ispirato ai migliori siti per idraulici anglofoni (USA/UK): telefono sempre in evidenza,
-fiducia, urgenza, recensioni Google e call-to-action chiare. Nessuna dipendenza, nessun build:
-sono solo file HTML/CSS/JS, pronti da pubblicare ovunque.
+Segue il sistema di design del progetto (`../DESIGN.md`): palette **calce + rame brunito**,
+tipografia **Fraunces / Mona Sans / Space Grotesk**, firma "insegna d'officina", accento rame
+solo dove guida l'occhio. Prende dai migliori siti anglofoni i *principi di conversione*
+(telefono come azione primaria ripetuta, urgenza 24h, prova sociale), restando caldo e italiano.
+Nessuna dipendenza, nessun build: sono solo file HTML/CSS/JS, pronti da pubblicare ovunque.
 
 > Questo sito è **separato** dal sito della palestra (che resta nella cartella principale del repo).
 > Vive tutto dentro la cartella `idraulico-h24/`.
@@ -25,7 +27,7 @@ idraulico-h24/
 ├── index.html        # tutte le sezioni (hero, servizi, condizionatori, come lavoriamo,
 │                     #  perché noi, zone servite, recensioni, FAQ, contatti)
 ├── 404.html          # pagina di errore
-├── css/style.css     # stile completo (blu acqua + arancio CTA)
+├── css/style.css     # stile completo (calce + rame, token da DESIGN.md)
 ├── js/main.js        # menu mobile, animazioni, contatori, FAQ, form
 ├── images/           # logo + slot per le tue foto (vedi images/README.md)
 ├── favicon.svg
@@ -58,7 +60,7 @@ Essendo un sito statico puoi pubblicarlo in pochi minuti con:
 | Email che riceve il form   | `js/main.js` → variabile `CONTACT_EMAIL`                        |
 | Form senza email client    | `js/main.js` → `FORMSPREE_ENDPOINT` (account Formspree gratuito) |
 | Testi, servizi, recensioni | `index.html`                                                    |
-| Colori del brand           | `css/style.css` → blocco `:root` (`--blue`, `--accent`)         |
+| Colori del brand           | `css/style.css` → blocco `:root` (`--bg` calce, `--ink`, `--accent` rame). Per ogni cliente adatta la palette ai suoi materiali, come indicato in `DESIGN.md`. |
 | Foto                       | cartella `images/` (vedi `images/README.md`)                    |
 | Dominio nei dati SEO       | `index.html` → `<link rel="canonical">`, JSON-LD, `sitemap.xml`, `robots.txt` |
 
@@ -66,6 +68,8 @@ Essendo un sito statico puoi pubblicarlo in pochi minuti con:
 - Il **form contatti** è funzionante: di default apre il programma di posta con il
   messaggio precompilato. Per riceverlo direttamente via web (senza email client),
   configura un endpoint **Formspree** gratuito in `js/main.js`.
-- Il sito funziona **anche senza foto**: mostra eleganti sfondi grafici nei colori del brand.
+- Il sito funziona **anche senza foto**: al posto delle immagini mostra placeholder
+  chiaramente etichettati `[FOTO REALE DEL CLIENTE]`. Sostituiscili con foto vere del lavoro
+  (hero: `images/hero.jpg`, condizionatori: `images/condizionatori.jpg`) — vedi `images/README.md`.
 - Le **recensioni** mostrate sono quelle reali e pubbliche su Google.
-- Inserisci la **P.IVA** nel footer di `index.html` quando disponibile.
+- Inserisci la **P.IVA** nel footer di `index.html` (segnaposto `[P.IVA del cliente]`).

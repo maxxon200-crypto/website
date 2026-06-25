@@ -1,7 +1,8 @@
 # Immagini del sito — Idraulico H24 Milano
 
-Il sito funziona **anche senza foto** (mostra eleganti sfondi grafici nei colori del brand),
-ma diventa ancora più convincente con **foto reali** dei tuoi lavori.
+Il sito funziona **anche senza foto**: al posto delle immagini mostra placeholder
+chiaramente etichettati `[FOTO REALE DEL CLIENTE]`. Ma diventa molto più convincente con
+**foto reali** dei tuoi lavori (DESIGN.md: foto vere &gt; immagini stock, sempre).
 
 ## ✅ Come aggiungere le tue foto (semplicissimo, zero codice)
 
@@ -10,9 +11,9 @@ Appariranno **da soli** nel sito, al posto dei segnaposto. Non serve toccare il 
 
 | File                  | Dove appare nel sito                         | Formato consigliato        |
 |-----------------------|----------------------------------------------|----------------------------|
-| `hero.jpg`            | Sfondo grande in cima (hero)                 | 1920×1080 px (orizzontale) |
+| `hero.jpg`            | Riquadro foto dell'hero (in alto a destra)   | ~1200×1000 px (quasi quadrata) |
 | `condizionatori.jpg`  | Sezione "Sanificazione condizionatori"       | ~1200×900 px (orizzontale) |
-| `logo.svg`            | Logo (già presente)                          | — sostituibile con `logo.png` |
+| `logo.svg`            | Anteprima social (Open Graph) / favicon       | — il nome in pagina è l'insegna testuale |
 
 > I nomi devono essere **identici** (minuscolo). Puoi caricarne anche solo alcune:
 > gli slot senza foto restano segnaposto grafici.
@@ -27,10 +28,10 @@ Appariranno **da soli** nel sito, al posto dei segnaposto. Non serve toccare il 
 3. Trascina le foto **rinominate** come sopra (`hero.jpg`, `condizionatori.jpg`)
 4. **Commit changes**. Fatto: il sito si aggiorna da solo.
 
-## Logo
-È già presente `logo.svg` (logo vettoriale "Idraulico H24"). Per usare un logo PNG,
-caricalo come `logo.png` e sostituisci `logo.svg` con `logo.png` nei riferimenti in
-`index.html` (header e footer).
+## Logo / insegna
+Nell'header e nel footer il nome **"Idraulico H24"** è reso come **insegna testuale**
+(targa calce con filo ottone, font Fraunces) — la firma prevista da `DESIGN.md`. Non serve
+un file logo per il sito. `logo.svg` resta usato solo per l'anteprima social (Open Graph).
 
 ## Consigli per foto perfette
 - Scatta/scegli foto **luminose e ben inquadrate**.
