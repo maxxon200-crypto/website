@@ -196,13 +196,13 @@
         }).then(function (r) {
           if (r.ok) {
             form.reset();
-            statusEl.textContent = "✅ Richiesta inviata! Ti ricontattiamo al più presto.";
+            statusEl.textContent = "✅ Richiesta ricevuta! Ti richiamiamo noi al più presto.";
             statusEl.className = "form__status ok";
           } else {
             throw new Error("bad response");
           }
         }).catch(function () {
-          statusEl.textContent = "Si è verificato un errore. Chiamaci allo 345 083 4365.";
+          statusEl.textContent = "L'invio non è andato a buon fine. Chiamaci allo 345 083 4365: rispondiamo subito.";
           statusEl.className = "form__status err";
         }).finally(function () { btn.disabled = false; });
         return;
@@ -213,7 +213,7 @@
         "?subject=" + encodeURIComponent(fullSubject) +
         "&body=" + encodeURIComponent(body);
       window.location.href = mailto;
-      statusEl.textContent = "✅ Si aprirà il tuo programma di posta per inviare la richiesta. Per le emergenze chiama lo 345 083 4365.";
+      statusEl.textContent = "✅ Si apre il tuo programma di posta per mandarci la richiesta. Se è un'emergenza, chiama lo 345 083 4365: rispondiamo noi.";
       statusEl.className = "form__status ok";
     });
 
