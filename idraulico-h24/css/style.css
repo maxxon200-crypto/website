@@ -218,7 +218,11 @@ strong { font-weight: 600; }
 /* =====================================================================
    HERO — caldo, a due colonne, con foto reale del cliente
    ===================================================================== */
-.hero { padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(3.5rem, 7vw, 5.5rem); }
+.hero {
+  padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(3.5rem, 7vw, 5.5rem);
+  /* profondità discreta: un soffio di luce calda dietro la foto, sfuma nel fondo calce */
+  background: radial-gradient(92% 72% at 84% 6%, var(--surface) 0%, rgba(254,252,247,0) 56%), var(--bg);
+}
 .hero__grid {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: clamp(2rem, 5vw, 4rem); align-items: start;
@@ -229,13 +233,25 @@ strong { font-weight: 600; }
   color: var(--ink-soft); background: var(--surface); border: 1px solid var(--line); padding: 8px 14px; border-radius: 999px;
   margin-bottom: 22px;
 }
-.hero__eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--positive); box-shadow: 0 0 0 4px rgba(62,107,79,.18); }
+.hero__eyebrow .dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--positive);
+  box-shadow: 0 0 0 0 rgba(62,107,79,.42); animation: heroDotPulse 2.4s var(--ease) infinite;
+}
+/* "siamo attivi ora": anello che si espande piano e svanisce, discreto */
+@keyframes heroDotPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(62,107,79,.42); }
+  70%  { box-shadow: 0 0 0 8px rgba(62,107,79,0); }
+  100% { box-shadow: 0 0 0 0 rgba(62,107,79,0); }
+}
 .hero__title {
-  font-size: clamp(2.05rem, 4.4vw, 3.2rem); font-weight: 450; color: var(--ink);
-  line-height: 1.1; letter-spacing: -.015em;
+  font-size: clamp(2.25rem, 4.9vw, 3.55rem); font-weight: 450; color: var(--ink);
+  line-height: 1.05; letter-spacing: -.02em; text-wrap: balance;
 }
 .hero__subtitle { font-size: clamp(1.02rem, 1.6vw, 1.14rem); color: var(--ink-soft); margin-top: 20px; max-width: 34em; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+/* la chiamata "buca" un po' di più sul fondo caldo */
+.hero__actions .btn--primary { box-shadow: var(--shadow); }
+.hero__actions .btn--primary:hover { box-shadow: var(--shadow-lg); }
 
 .hero__rating { display: inline-flex; align-items: center; gap: 12px; margin-top: 26px; }
 .hero__rating .stars { font-size: 1.1rem; }
@@ -251,8 +267,9 @@ strong { font-weight: 600; }
 /* Media hero: foto reale o placeholder etichettato */
 .hero__media {
   position: relative; border-radius: var(--radius-lg); overflow: hidden;
-  border: 1px solid var(--line); box-shadow: var(--shadow-lg);
-  aspect-ratio: 4 / 3.4; background: var(--surface);
+  border: 1px solid var(--line); border-top: 3px solid var(--accent);
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4 / 5; background: var(--surface);     /* verticale: pensata per una foto reale in piedi */
 }
 .hero__media img { width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 2; }
 .hero__media-tag {
@@ -274,6 +291,18 @@ strong { font-weight: 600; }
 .photo-ph svg { width: 40px; height: 40px; fill: var(--accent-deep); opacity: .55; }
 .photo-ph__label { font-family: var(--font-util); font-weight: 600; font-size: .82rem; letter-spacing: .06em; color: var(--accent-deep); }
 .photo-ph__sub { font-family: var(--font-util); font-size: .68rem; letter-spacing: .03em; color: var(--accent-deep); opacity: .65; }
+
+/* Hero: contenitore foto più curato — cornice "pronta per la foto", icona più presente */
+.hero__media .photo-ph {
+  gap: 16px;
+  background: radial-gradient(120% 75% at 50% 0%, rgba(154,91,46,.12), transparent 60%), var(--accent-tint);
+}
+.hero__media .photo-ph::before {
+  content: ""; position: absolute; inset: 16px; pointer-events: none;
+  border: 1px dashed rgba(110,62,31,.30); border-radius: 8px;
+}
+.hero__media .photo-ph svg { width: 50px; height: 50px; position: relative; opacity: .62; }
+.hero__media .photo-ph__label { font-size: .9rem; }
 
 /* =====================================================================
    TRUST BAR (numeri) — officina scura
